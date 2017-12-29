@@ -1,0 +1,39 @@
+{
+    "debug": true,
+    "process": {
+        "file_limit": 1000000,
+        "core_limit": 1000000000
+    },
+    "log": {
+        "path": "/var/log/trade/marketprice",
+        "flag": "fatal,error,warn,info,debug,trace",
+        "num": 10
+    },
+    "alert": {
+        "host": "marketprice",
+        "addr": "127.0.0.1:4444"
+    },
+    "monitor": {
+        "name": "monitor",
+        "addr": "tcp@127.0.0.1:5555",
+        "max_pkg_size": 1024
+    },
+    "svr": {
+        "bind": "tcp@0.0.0.0:7416",
+        "max_pkg_size": 10240
+    },
+    "deals": {
+        "brokers": "127.0.0.1:9092",
+        "topic": "deals",
+        "partition": 0
+    },
+    "redis": {
+        "name": "mymaster",
+        "addr": [
+            "127.0.0.1:26381",
+            "127.0.0.1:26382",
+            "127.0.0.1:26383"
+        ]
+    },
+    "accesshttp": "http://127.0.0.1:8080"
+}
