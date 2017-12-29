@@ -1,0 +1,6 @@
+{
+  "files.associations": {
+    "stdexcept": "c",
+    "algorithm": "c"
+  }
+}
